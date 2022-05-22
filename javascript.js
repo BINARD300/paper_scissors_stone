@@ -1,16 +1,29 @@
-//basic code to select random number 1-3 that represents paper scissors stone
+let pss2 = ()=>{
 
-let pss = ()=>{
-
-    let y = Math.floor(Math.random() * 3);//creates random number
+    let y = Math.floor(Math.random() * 3);
     if(y == 0 ){
-    prompt("paper")
+    return "paper"
     }else if(y == 1){
-    prompt("Scissors")
+    return "Scissors"
     }else if(y == 2){
-    prompt("Stone")
+    return "Stone"
     }
     }
-    undefined
-    pss()
     
+    // playerInput accepts paper scissors stone and makes it lower case
+    let playerInput = () => {
+    userInput = prompt("input PSS");
+    userInput = userInput.toLowerCase();
+    playerSelection = userInput;
+    return playerSelection;
+    
+    }
+    
+    function playRound(playerSelected, computerSelected) {
+    
+    let x1 = playerSelected();
+    let c1 = computerSelected();
+    console.log(x1,c1); //outputs player and computer selection
+    }
+    
+    playRound(playerInput, pss2) ;
