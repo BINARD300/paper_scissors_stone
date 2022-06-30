@@ -1,5 +1,8 @@
 let computerScore = 0;
 let userScore = 0;
+let tag = document.getElementById("scores") ;
+
+//button code here
 
 let pss2 = ()=>{
 
@@ -53,9 +56,12 @@ console.log("---------------------------------------------------");
 
  
 let game = ()=>{ //test code to confirm logic
-    for (let i = 0; i < 5; i++) {
+    for (let i = 0; i < 1; i++) {
    playRound(playerInput, pss2) ;
 }
-console.log("Final score - user: "+ userScore+ " |   computer: "+ computerScore);
+// console.log("Final score - user: "+ userScore+ " |   computer: "+ computerScore);
+tag.innerHTML = "Final score - user: "+ userScore+ " |   computer: "+ computerScore;
 }
+
+
 game();
